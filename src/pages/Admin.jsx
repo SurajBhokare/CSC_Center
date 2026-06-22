@@ -3,8 +3,7 @@ import AdminSidebar from "../components/AdminSidebar";
 import Dashboard from "../components/Dashboard";
 import AddService from "../components/admin/AddService";
 import AdminCategories from "../components/AdminCategories";
-import ManageServices
-from "../components/admin/ManageServices";
+import ManageServices from "../components/admin/ManageServices";
 
 function Admin() {
 // export data as JSON file
@@ -77,7 +76,10 @@ case "manage-services":
       setSelectedService={setSelectedService}
       setActiveTab={setActiveTab}
     />
+   
   );
+  case "categories":
+    return <AdminCategories />;
     default:
       return (
         <h3>{activeTab}</h3>

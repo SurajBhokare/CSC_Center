@@ -1,30 +1,21 @@
-import {
-    useEffect,
-    useState
-} from "react";
+import { useEffect, useState } from "react";
+import { getCategories, saveCategories } from "../utils/CategoryStorage";
 
-import {
-    getCategories,
-    saveCategories
-}
-    from "../utils/categoryStorage";
 function AdminCategories() {
-    const [categories, setCategories]
-        =
-        useState([]);
-    const [category, setCategory]
-        =
-        useState("");
+    const [categories, setCategories] = useState([]);
+    const [category, setCategory] = useState("");
     useEffect(() => {
-        setCategories(
-            getCategories()
-        );
+        setCategories(getCategories() || []);
     }, []);
 
     const addCategory = () => {
-        if (!category.trim())
+        const value = category.trim();
+        if (!value) return;
+        if (categories.includes(value)) {
+            setCategory("");
             return;
-        const updated = [...categories, category];
+        }
+        const updated = [...categories, value];
         setCategories(updated);
         saveCategories(updated);
         setCategory("");
@@ -47,7 +38,8 @@ function AdminCategories() {
                     className="form-control"
                     placeholder="Enter Category"
                     value={category}
-                    onChange={(e) => setCategory(e.target.value)} />
+                    onChange={(e) => setCategory(e.target.value)}
+                    onKeyDown={(e) => { if (e.key === 'Enter') addCategory(); }} />
                 <button
                     className="btn btn-primary"
                     onClick={addCategory}>
@@ -75,4 +67,6 @@ function AdminCategories() {
             </ul>
         </div>
     );
-} export default AdminCategories;
+}
+
+export default AdminCategories;

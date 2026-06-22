@@ -1,0 +1,144 @@
+.custom-navbar {
+  padding: 15px 0;
+  position: sticky;
+  top:0;
+  z-index:1000;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  transition: .4s;
+}
+
+/* LOGO */
+.logo {
+  font-size:1.5rem;
+  font-weight:800;
+  color:inherit !important;
+}
+ .logo {
+  display:flex;
+  align-items:center;
+  text-decoration:none;
+}
+.navbar-logo {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  transition: 0.3s ease;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05);
+}
+
+/* LINKS */
+.nav-link {
+  font-weight:600;
+  transition:.3s;
+}
+
+.nav-link:hover {
+  transform:translateY(-3px);
+  font-weight:700;
+}
+/* ADMIN BUTTON */
+.admin-btn {
+  padding:8px 18px;
+  border-radius:20px;
+  background:
+  linear-gradient(
+    135deg,
+    #3b82f6,
+    #8b5cf6
+  );
+  color:white !important;
+}
+
+/* =====================
+   THEME SWITCH
+===================== */
+
+.theme-toggle {
+  width:65px;
+  height:34px;
+  border:none;
+  border-radius:50px;
+  background:
+  linear-gradient(
+    135deg,
+    #3b82f6,
+    #8b5cf6
+  );
+  padding:4px;
+  display:flex;
+  align-items:center;
+  cursor:pointer;
+  margin-left:15px;
+}
+.toggle-circle {
+  width:26px;
+  height:26px;
+  background:white;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:#3b82f6;
+  transition:.4s;
+}
+.toggle-circle.active {
+  transform:translateX(30px);
+}
+
+/* =====================
+      DARK MODE
+===================== */
+
+body[data-theme="dark"] {
+  background:#0f172a;
+  color:white;
+}
+
+body[data-theme="dark"] 
+.custom-navbar {
+  background:
+  rgba(15,23,42,0.45);
+  border-bottom:
+  1px solid rgba(255,255,255,0.08);
+}
+
+body[data-theme="dark"] 
+.nav-link {
+  color:white !important;
+}
+
+/* =====================
+      LIGHT MODE
+===================== */
+
+body[data-theme="light"] {
+  background:#f8fafc;
+  color:#111827;
+}
+
+body[data-theme="light"] 
+.custom-navbar {
+  background:
+  rgba(255,255,255,0.45);
+  border-bottom:
+  1px solid rgba(0,0,0,0.08);
+}
+
+body[data-theme="light"] 
+.nav-link {
+  color:#111827 !important;
+}
+
+/* Mobile */
+@media(max-width:991px){
+  .custom-navbar{
+    padding:12px;
+  }
+  .navbar-logo{
+    height:45px;
+  }
+}

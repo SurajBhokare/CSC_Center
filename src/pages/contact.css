@@ -1,0 +1,98 @@
+/* Heading */
+.contact-title {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+/* Cards */
+.contact-card {
+  border: none;
+  border-radius: 20px;
+  padding: 30px;
+  transition: 0.4s;
+  height: 100%;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Contact Details */
+.contact-info p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-info svg {
+  font-size: 1.2rem;
+}
+
+/* Form */
+.contact-form .form-control {
+  border-radius: 12px;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  transition: .3s;
+}
+
+.contact-form .form-control:focus {
+  box-shadow: 0 0 15px rgba(59, 130, 246, .2);
+  border-color: #3b82f6;
+}
+
+/* Button */
+.contact-btn {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  border: none;
+  border-radius: 12px;
+  padding: 12px 25px;
+  color: white;
+  font-weight: 600;
+  transition: .4s;
+}
+
+.contact-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* Office Card */
+.office-card {
+  border-radius: 20px;
+  padding: 30px;
+}
+
+/* DARK MODE */
+body[data-theme="dark"] .contact-card,
+body[data-theme="dark"] .office-card {
+  background: #1e293b;
+  color: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, .3);
+}
+
+body[data-theme="dark"] .form-control {
+  background: #0f172a;
+  color: white;
+  border: 1px solid #334155;
+}
+
+body[data-theme="dark"] .form-control::placeholder {
+  color: #94a3b8;
+}
+
+/* LIGHT MODE */
+body[data-theme="light"] .contact-card,
+body[data-theme="light"] .office-card {
+  background: white;
+  color: #111827;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+}
+
+/* Mobile */
+@media(max-width:768px) {
+  .contact-title {
+    font-size: 2rem;
+  }
+}

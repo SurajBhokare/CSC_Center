@@ -1,0 +1,147 @@
+/* ==========================
+   ADD SERVICE CONTAINER
+========================== */
+
+.add-service-container {
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  transition: all 0.3s ease;
+}
+
+.add-service-container h2 {
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.add-service-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+/* ==========================
+   FORM CONTROLS
+========================== */
+
+.add-service-container .form-control {
+  padding: 12px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.add-service-container .form-control:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  outline: none;
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+.add-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(
+    135deg,
+    #3b82f6,
+    #8b5cf6
+  );
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.add-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(59,130,246,0.3);
+}
+
+/* ==========================
+   DARK THEME
+========================== */
+
+body[data-theme="dark"] .add-service-container {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+body[data-theme="dark"] .add-service-container h2,
+body[data-theme="dark"] .add-service-container label {
+  color: #ffffff;
+}
+
+body[data-theme="dark"] .add-service-container .form-control {
+  background: rgba(255,255,255,0.05);
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+body[data-theme="dark"] .add-service-container .form-control:focus {
+  background: rgba(255,255,255,0.08);
+  border-color: #3b82f6;
+  color: #ffffff;
+}
+
+body[data-theme="dark"] .add-service-container .form-control::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+body[data-theme="dark"] .add-service-container select.form-control option {
+  background: #1f2937;
+  color: white;
+}
+
+/* ==========================
+   LIGHT THEME
+========================== */
+
+body[data-theme="light"] .add-service-container {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+body[data-theme="light"] .add-service-container h2,
+body[data-theme="light"] .add-service-container label {
+  color: #111827;
+}
+
+body[data-theme="light"] .add-service-container .form-control {
+  background: #ffffff;
+  color: #111827;
+  border: 1px solid #d1d5db;
+}
+
+body[data-theme="light"] .add-service-container .form-control:focus {
+  background: #ffffff;
+  color: #111827;
+  border-color: #3b82f6;
+}
+
+body[data-theme="light"] .add-service-container .form-control::placeholder {
+  color: #6b7280;
+}
+
+body[data-theme="light"] .add-service-container select.form-control option {
+  background: white;
+  color: #111827;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 768px) {
+  .add-service-container {
+    padding: 20px;
+  }
+
+  .add-btn {
+    padding: 12px;
+  }
+}

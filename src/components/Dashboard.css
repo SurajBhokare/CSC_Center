@@ -1,0 +1,67 @@
+.dashboard-header h2 {
+  font-weight: 700;
+}
+
+.dashboard-header p {
+  color: #70a1e4;
+}
+
+.dashboard-header p:hover {
+  color: #3b82f6;
+  text-decoration: underline rgb(98, 97, 97);
+  font-weight: 500;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dashboard-card {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(14, 13, 13, 0.268);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  transition: .3s;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 10px 25px rgba(59, 130, 246, .25);
+}
+
+.dashboard-icon {
+  font-size: 2rem;
+  color: #60a5fa;
+
+  margin-bottom: 15px;
+}
+
+.dashboard-card h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.dashboard-card p {
+  color: #94a3b8;
+}
+
+.recent-section {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 25px;
+}
+
+.recent-item {
+  padding: 12px;
+  border-bottom: 1px solid rgba(19, 18, 18, 0.971);
+}
+
+.recent-item:hover {
+  background: rgba(80, 78, 78, 0.145);
+  cursor: pointer;
+  color: #3b82f6;
+  font-weight: 500;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 8px;
+
+}

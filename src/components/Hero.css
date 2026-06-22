@@ -1,0 +1,137 @@
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.hero-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+}
+
+.hero-glow-1 {
+  width: 300px;
+  height: 300px;
+  background: #3b82f6;
+  top: 10%;
+  left: -100px;
+}
+
+.hero-glow-2 {
+  width: 300px;
+  height: 300px;
+  background: #8b5cf6;
+  right: -100px;
+  bottom: 10%;
+}
+
+.hero-badge {
+  background: rgba(255, 255, 255, 0.404);
+  padding: 10px 20px;
+  border-radius: 30px;
+  display: inline-block;
+  backdrop-filter: blur(10px);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+.hero-badge:hover{
+    background: linear-gradient( 90deg,#3b82f6,#8b5cf6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+  
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-top: 20px;
+}
+
+.hero-title span {
+  background: linear-gradient( 90deg,#3b82f6,#8b5cf6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-desc {
+  color: smoke;
+  margin-top: 20px;
+  font-size: 1.1rem;
+}
+
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+}
+button:hover {
+  font-weight: bold;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.explore-btn {
+  background: linear-gradient( 135deg, #3b82f6, #8b5cf6);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+}
+
+.contact-btn {
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  padding: 12px 25px;
+}
+
+.glass-card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 30px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.search-btn {
+  width: 100%;
+  background: linear-gradient(
+    135deg,
+    #3b82f6,
+    #8b5cf6
+  );
+  border: none;
+  color: white;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.stats h4 {
+  color: #60a5fa;
+  font-weight: bold;
+}
+
+.stats p {
+  color: smoke;
+}
+
+@media(max-width:768px){
+
+  .hero-title{
+    font-size:2.5rem;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+  }
+
+  .glass-card{
+    margin-top:40px;
+  }
+
+}
